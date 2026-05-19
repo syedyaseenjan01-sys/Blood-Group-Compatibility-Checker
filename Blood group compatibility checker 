@@ -1,0 +1,28 @@
+Project Title: Blood Group Compatibility Checker System (C++ OOP Based)
+1. Abstract:
+This project is a C++ console-based application designed to check blood group compatibility between a donor and a receiver. It uses Object-Oriented Programming (OOP) principles to create a structured, reusable, and efficient system that simulates real-life blood transfusion matching.
+2. Problem Statement:
+Incorrect blood group matching can lead to serious health risks. Manual checking is slow and may cause errors, especially in emergency situations. Therefore, an automated system is required to quickly and accurately determine blood compatibility.
+3. Objectives:
+To develop a C++ program using OOP concepts
+To automate blood group compatibility checking
+To reduce human error in blood matching
+To improve practical understanding of programming concepts
+4. Scope of the Project:
+This system covers standard human blood groups (A+, A-, B+, B-, AB+, AB-, O+, O-). It is designed for educational purposes and can be extended into a full hospital management system in the future.
+5. Tools & Technology:
+Programming Language: C++
+Programming Paradigm: Object-Oriented Programming (OOP)
+IDE: Code::Blocks / Dev C++ / VS Code
+6. Methodology:
+The system works in the following steps:
+Input donor and receiver blood groups
+Validate input data
+Apply compatibility rules
+Display result (Compatible / Not Compatible)
+7. Expected Outcome:
+A working C++ application that accurately checks blood group compatibility and demonstrates core OOP concepts in a real-world scenario.
+8. License:
+This project is developed for educational purposes only. It is free to use, modify, and distribute for academic learning and non-commercial use. Proper credit to the original developer is appreciated when reused or modified.
+9. Conclusion:
+This project helps students understand Object-Oriented Programming concepts while applying them to a practical and meaningful real-world problem in the medical domain.
