@@ -1,0 +1,83 @@
+
+#include <iostream>
+using namespace std;
+
+class BloodGroup
+{
+protected:
+    string donor, recipient;
+
+public:
+    BloodGroup()
+    {
+        cout << "Blood Compatibility Checker\n";
+    }
+
+    void input()
+    {
+        cout << "Enter Donor Blood Group: ";
+        cin >> donor;
+
+        cout << "Enter Recipient Blood Group: ";
+        cin >> recipient;
+    }
+
+    virtual void check() = 0;
+};
+
+class Compatibility : public BloodGroup
+{
+public:
+    void check() override
+    {
+        bool compatible = false;
+
+        if (donor == "O-")
+            compatible = true;
+
+        else if (donor == "O+" &&
+                (recipient == "O+" || recipient == "A+" ||
+                 recipient == "B+" || recipient == "AB+"))
+            compatible = true;
+
+        else if (donor == "A-" &&
+                (recipient == "A-" || recipient == "A+" ||
+                 recipient == "AB-" || recipient == "AB+"))
+            compatible = true;
+
+        else if (donor == "A+" &&
+                (recipient == "A+" || recipient == "AB+"))
+            compatible = true;
+
+        else if (donor == "B-" &&
+                (recipient == "B-" || recipient == "B+" ||
+                 recipient == "AB-" || recipient == "AB+"))
+            compatible = true;
+
+        else if (donor == "B+" &&
+                (recipient == "B+" || recipient == "AB+"))
+            compatible = true;
+
+        else if (donor == "AB-" &&
+                (recipient == "AB-" || recipient == "AB+"))
+            compatible = true;
+
+        else if (donor == "AB+" &&
+                recipient == "AB+")
+            compatible = true;
+
+        if (compatible)
+            cout << "Compatible" << endl;
+        else
+            cout << "Not Compatible" << endl;
+    }
+};
+
+int main()
+{
+    Compatibility obj;
+    obj.input();
+    obj.check();
+
+    return 0;
+}
